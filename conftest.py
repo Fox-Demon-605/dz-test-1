@@ -34,8 +34,8 @@ def browser(request):
         raise ValueError(f"Браузер {browser_name} не поддерживается")
 
     driver.maximize_window()
-    driver.implicitly_wait(5)
-
+    driver.implicitly_wait(0)
+    
     yield driver
 
     driver.quit()
